@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="exmaple.com.ValidBrace"/>
+<fullyQualifiedTypeName name="java.util.Stack"/>
+<fullyQualifiedTypeName name="exmaple.com.MergeTwoSortedArr"/>
+<fullyQualifiedTypeName name="javax.print.attribute.standard.Fidelity"/>
+<fullyQualifiedTypeName name="exmaple.com.singly.linkedlist.SinglyLinkedList"/>
+<fullyQualifiedTypeName name="java.util.Set"/>
+<fullyQualifiedTypeName name="java.util.Scanner"/>
+<fullyQualifiedTypeName name="java.lang.Character"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="exmaple.com.doubly.linkedlist.Node"/>
+<fullyQualifiedTypeName name="exmaple.com.doubly.linkedlist.DoublyLinkedList"/>
+<fullyQualifiedTypeName name="java.util.Map.Entry"/>
+<fullyQualifiedTypeName name="exmaple.com.tree.BinaryTree"/>
+<fullyQualifiedTypeName name="java.util.Map"/>
+<fullyQualifiedTypeName name="java.util.HashMap"/>
+<fullyQualifiedTypeName name="java.lang.Boolean"/>
+<fullyQualifiedTypeName name="java.util.Arrays"/>
+<fullyQualifiedTypeName name="exmaple.com.tree.AirPlain"/>
+<fullyQualifiedTypeName name="exmaple.com.tree.AirJet"/>
+<fullyQualifiedTypeName name="java.io.IOException"/>
+<fullyQualifiedTypeName name="javax.swing.tree.TreeNode"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="java.lang.Integer"/>
+<fullyQualifiedTypeName name="algo.leet.code.TreeNode"/>
+</qualifiedTypeNameHistroy>

@@ -1,0 +1,10 @@
+package algo.leet.code;
+
+import java.util.List;
+
+public class MeaneringGivenArray {
+	public static List<Integer> meanderingArray(List<Integer> unsorted){
+		
+		return unsorted;
+	}
+}

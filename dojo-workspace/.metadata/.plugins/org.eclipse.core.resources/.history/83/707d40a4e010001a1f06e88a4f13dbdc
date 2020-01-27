@@ -1,0 +1,13 @@
+package algo.linked.list.com;
+
+import java.awt.List;
+
+public class SingleLinkedListTest {
+	Node n1= new Node(9);
+	Node n2= new Node(2);
+	Node n3= new Node(5);
+	
+	SinglyLinkedList slist=new SinglyLinkedList();
+	
+	slist
+}

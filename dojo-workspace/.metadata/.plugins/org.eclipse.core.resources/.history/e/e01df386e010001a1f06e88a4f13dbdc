@@ -1,0 +1,16 @@
+package algo.linked.list.com;
+
+public class SinglyLinkedList {
+	private Node head;
+	
+	public SinglyLinkedList(){
+		setHead(null);
+	}
+	public Node getHead() {
+		return head;
+	}
+	public void setHead(Node head) {
+		this.head = head;
+	}
+	
+}

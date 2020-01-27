@@ -1,0 +1,193 @@
+package exmaple.com.singly.linkedlist;
+
+public class SinglyLinkedList<T> {
+	public Node<T> head;
+	public int size;
+	
+	public SinglyLinkedList() {
+		this.head=null;
+		this.size=0;
+	}
+	
+	public void insertAtEnd(T data){
+		Node<T> newNode=new Node<T>(data);
+		Node<T> current = head;
+		//list is empty
+		if(current==null) {
+			head = newNode;
+			size++;
+		}
+		else {
+			while(current.next != null) {
+				current = current.next;
+			}
+			current.next=newNode;
+			size++;
+		}
+	}
+	
+	public void insertAtHead(T data){
+		Node<T> newNode=new Node<T>(data);
+		if(head == null) {
+			head = newNode;
+			size++;
+		}
+		else {
+			newNode.next = head;
+			head = newNode;
+			size++;
+		}
+	}
+	
+	public void print() {
+		Node<T> current = head;
+		if(current!=null) {
+			while(current != null) {
+				System.out.print(current.data+ " ");
+				current = current.next;
+			}
+		}
+	}
+	
+	public void delete(T data){
+		if(head.data == data) {
+			head = head.next;
+			return;
+		}
+		Node<T> current = head;
+		while(current.next != null) {
+			if(current.next.data == data) {
+				current.next=current.next.next;
+				return;
+			}
+			current = current.next;
+		}
+		
+	} 
+	
+	public void insertAt(T data,int index) {
+		Node<T> newNode = new Node<T>(data);
+		Node<T> current =  this.head;
+		index =  index - 1;
+		while(current.next != null && index > 0) {
+			current = current.next;
+			index--;
+		}
+		newNode.next = current.next;
+		current.next = newNode;
+	}
+	
+	public void deleteAtHead() {
+		if(head != null) {
+			return;
+		}
+		if(head.next != null) {
+			head = head.next;
+			return;
+		}
+	}
+	
+	public void deleteAtEnd() {
+		Node<T> current = head;
+		while(current.next.next != null) {
+			current = current.next;
+		}
+		current.next = null;
+		return;
+	}
+	
+	public Node<T> search(T data) {
+		Node<T> current = head;
+		while(current != null) {
+			if(current.data == data) {
+				System.out.println(current.data);
+				return current;
+			}
+			current = current.next;
+		}
+		return null;
+	}
+	
+	public boolean isEmpty() {
+		if(head==null) {
+			return true;
+		}
+		return false;
+	}
+	
+	public void reverse() {
+	//empty list or single node
+		if(head == null || head.next == null) {
+			return;
+		}
+		Node <T> prev = null;
+		Node <T> curr = head;
+		Node <T> next = null;
+		
+		while(curr != null) {
+			next = curr.next;
+			curr.next = prev;
+			prev = curr;
+			curr = next;
+		}
+		head = prev;
+	}
+	
+	public void removeLastFromKth(int n) {
+		if(head == null) {
+			return;
+		}
+		int size = 0;
+		Node<T> current = head;
+		while(current != null) {
+			current = current.next;
+			size++;
+		}
+		if(n<size) {
+			Node<T> runner = head;
+			int index = size - n;
+			while(runner != null) {
+				if(index == 0) {
+					break;
+				}
+				else {
+					runner = runner.next;
+				}
+			}
+			if(runner != null && runner.next != null) {
+				runner = runner.next.next;
+			}
+		}
+		else {
+			return;
+		}
+	}
+	
+	public static void main(String[] args) {
+		SinglyLinkedList<Integer> s1= new SinglyLinkedList<Integer>();
+		s1.insertAtHead(21);
+		s1.insertAtHead(33);
+		s1.insertAtHead(14);
+		s1.insertAtHead(39);
+		s1.insertAtHead(16);
+		s1.print();
+		s1.delete(21);
+		System.out.println();
+		s1.print();
+		System.out.println();
+		s1.deleteAtEnd();
+		s1.print();
+		System.out.println();
+		s1.search(14);
+		System.out.println("Testing insert next");
+		s1.insertAt(22,3);
+		s1.print();
+		
+		System.out.println("Testing reverse next");
+		s1.reverse();
+		s1.print();
+		s1.removeLastFromKth(2);
+		System.out.println();
+		s1.print();
+	}
+}
